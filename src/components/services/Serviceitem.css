@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+# Service Item
+--------------------------------------------------------------*/
+.single-service-box {
+    text-align: center;
+    border: 1px solid #d5e1ed;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    transition: all ease-in-out 0.3s;
+    margin: 2rem auto;
+    box-shadow: 2px 2px 7px 0px #888;
+}
+
+.service-banner {
+    max-height: 65vh;
+}
+
+.service-banner,
+.service-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.single-service-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #1977cc;
+    border-radius: 5px;
+    transition: all .3s ease-out 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+}
+
+.single-service-box .icon i {
+    color: #fff;
+    font-size: 28px;
+}
+
+.single-service-box .icon::before {
+    position: absolute;
+    content: '';
+    left: -8px;
+    top: -8px;
+    height: 100%;
+    width: 100%;
+    background: #badaf7;
+    border-radius: 5px;
+    transition: all .3s ease-out 0s;
+    transform: translateZ(-1px);
+}
+
+.single-service-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.single-service-box h4 a {
+    color: #2c4964;
+}
+
+.single-service-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}

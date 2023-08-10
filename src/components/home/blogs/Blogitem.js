@@ -1,0 +1,34 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Blogitem(props) {
+    const { id, imgSrc, tag, title, content, authorImg, author, publishedAt } = props.blog;
+
+    return (
+        <div className="blog-box item">
+            <div className="blog-box-img">
+                <img src={`img/uplaods/${imgSrc}`} alt="blog" />
+                <Link to={`/blog?blogId=${id}`} className="blog-img-link">
+                    <i className="bi bi-box-arrow-up-right"></i>
+                </Link>
+            </div>
+
+            <div className="blog-box-text">
+                <strong>{tag}</strong>
+                <Link to={`/blog?blogId=${id}`}>{title}</Link>
+                <p>{content}</p>
+                <div className="blog-author">
+                    <div className="blog-author-img">
+                        <img src={`img/uplaods/${authorImg}`} alt="" />
+                    </div>
+                    <div className="blog-author-text">
+                        <strong>{author}</strong>
+                        <span>{publishedAt}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Blogitem;

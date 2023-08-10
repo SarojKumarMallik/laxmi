@@ -1,0 +1,201 @@
+.packages * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.packages *:focus {
+    outline: none;
+}
+
+.packages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.packages {
+    margin-bottom: 5rem;
+}
+
+.packages .top-banner {
+    background-color: #3d84c7;
+    padding: 1.5rem 4rem;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.packages p.current-plan {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.packages p.plan-type {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.packages h1.title {
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.packages .toggle-switch {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.packages .toggler {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: #0073ff;
+    border-radius: 25px;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.packages .toggler::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+}
+
+.packages .toggler:checked:before {
+    right: 55%;
+}
+
+.packages .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.packages .card {
+    width: 32%;
+    height: 30rem;
+    background: rgba(68, 176, 234, 0.4);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.packages .card-title {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.packages .card-price {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.packages h2>span {
+    font-size: 1rem;
+}
+
+.packages .card ul {
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+.packages .card ul li:before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: #0073ff;
+    font-size: 1.5rem;
+}
+
+.packages .card-btn {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #3291e6;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.packages .card-btn:hover {
+    background-color: #4492c9;
+}
+
+.packages select {
+    background: transparent;
+    border-color: #545c5c;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.packages option {
+    font-size: 1.2rem;
+    background-color: #333;
+}
+
+.packages .note {
+    color: #3291e6;
+    font-size: 0.75rem;
+    text-align: left;
+    display: block;
+    margin-top: 5px;
+}
+
+@media (max-width:1112px) {
+    .packages .cards {
+        justify-content: center;
+    }
+
+    .packages .card-price {
+        font-size: 2rem;
+    }
+
+    .packages .card {
+        width: 40%;
+        margin: 2rem;
+    }
+}
+
+@media (max-width:848px) {
+    .packages .card {
+        width: 50%
+    }
+}
+
+@media (max-width:674px) {
+    .packages .top-banner {
+        width: 70%;
+    }
+
+    .packages .card {
+        width: 70%;
+    }
+}
+
+@media (max-width:500px) {
+    .packages .top-banner {
+        width: 90%;
+    }
+
+    .packages .card {
+        width: 90%;
+    }
+}
