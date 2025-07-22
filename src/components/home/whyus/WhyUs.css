@@ -1,0 +1,61 @@
+.whyus-container {
+    background: #fff0f3af;
+    padding: 40px 15px;
+}
+
+.section-titlee h2 {
+    text-align: center;
+    color: #2c4964;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.accordionn {
+    width: 950px;
+    border-radius: 12px !important;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(249, 174, 188, 0.3) !important;
+    background: #ffffff !important;
+}
+
+.accordionn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(249, 174, 188, 0.4) !important;
+}
+
+.accordion-title {
+    font-weight: 600 !important;
+    font-size: 16px;
+    color: #333;
+}
+
+.accordion-content {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 967px) {
+    .accordionn {
+        width: 90%;
+    }
+}
+
+@media (max-width: 667px) {
+    .accordion-title {
+        font-size: 15px;
+    }
+
+    .accordion-content {
+        font-size: 14px;
+    }
+}

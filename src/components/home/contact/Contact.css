@@ -8,7 +8,7 @@
 
 .contact .info i {
     font-size: 20px;
-    color: #1977cc;
+    color: #d56889;
     float: left;
     width: 44px;
     height: 44px;
@@ -43,7 +43,7 @@
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-    background: #3fbbc0;
+    background: #d56889;
     color: #fff;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .contact .contact-form button[type="submit"] {
-    background: #1977cc;
+    background: #a32e55;
     border: 0;
     padding: 10px 35px;
     color: #fff;
@@ -81,7 +81,7 @@
 }
 
 .contact .contact-form button[type="submit"]:hover {
-    background: #3fbbc0;
+    background: #60cd9c;
 }
 
 @-webkit-keyframes animate-loading {

@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import Blogitem from './Blogitem';
 import blogsContext from '../../../context/blogs/blogscontext';
+import { withWidth } from '@material-ui/core';
 
 function Blogs() {
     const { blogs } = useContext(blogsContext);
@@ -24,8 +25,8 @@ function Blogs() {
         },
         autoPlay: true,
         animationType: "fadeout",
-        infinite: true,
-        autoPlayInterval: 2000
+        infinite: false,
+        autoPlayInterval: 2000,
     };
 
     return (

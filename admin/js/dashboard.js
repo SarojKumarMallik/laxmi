@@ -11,7 +11,7 @@ const viewEnquiryInfoDetails = () => {
             <table class="table table-hover datatable">
                 <thead>
                     <tr>
-                        <th scope="col">Id</th>
+                        <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Subject</th>
@@ -44,6 +44,56 @@ const viewEnquiryInfoDetails = () => {
     });
 }
 
+const viewAppointmentInfoDetails = () => {
+    $.ajax({
+        url: '../controllers/getAppointmentController.php',
+        type: "POST",
+        data: "view=true",
+        cache: false,
+        success: (response) => {
+            const appointmentInfoParsedResponse = JSON.parse(response);
+
+            let appointmentInfoParsedResponseInfo = `
+            <table class="table table-hover datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Patient Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Doctor</th>
+                        <th scope="col">Appt. Date</th>
+                        <th scope="col">Appt. Time</th>
+                    </tr>
+                </thead>
+            <tbody>`;
+            if (appointmentInfoParsedResponse['result']['status']['statusCode'] == "0") {
+                const appointmentInfoDetails = appointmentInfoParsedResponse['apptDetails'];
+
+                for (let i = 0; i < appointmentInfoDetails.length; i++) {
+                    appointmentInfoParsedResponseInfo += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${appointmentInfoDetails[i].patientName}</td>
+                        <td>${appointmentInfoDetails[i].patientEmail}</td>
+                        <td>${appointmentInfoDetails[i].patientPhone}</td>
+                        <td>${appointmentInfoDetails[i].drName}</td>
+                        <td>${appointmentInfoDetails[i].apptDate.slice(0, 16)}</td>
+                        <td>${appointmentInfoDetails[i].apptTime}</td>
+                    </tr>`;
+                }
+            }
+            appointmentInfoParsedResponseInfo += `</tbody></table>`;
+            $("#appointmentInfoTableContainer").html(appointmentInfoParsedResponseInfo);
+            $('.datatable').DataTable({
+                // scrollX: true,
+                // destroy: true,
+                responsive: true
+            });
+        }
+    });
+}
+
 function getDataForDashboard() {
     $.ajax({
         url: "../controllers/getDataForDashboard.php",
@@ -54,6 +104,8 @@ function getDataForDashboard() {
             if (response['result']['status']['statusCode'] == "0") {
                 $("#tot_enquiries").html(response['tot_enquiries']);
                 $("#tot_enquiries2").val(response['tot_enquiries']);
+                $("#tot_appointments").html(response['tot_appointments']);
+                $("#tot_appointments2").val(response['tot_appointments']);
             } else {
                 sweetAlert("error", response.result.status.errorMessage);
             }
@@ -62,6 +114,7 @@ function getDataForDashboard() {
 }
 $(document).ready(() => {
     viewEnquiryInfoDetails();
+    viewAppointmentInfoDetails();
     getDataForDashboard();
 
 });

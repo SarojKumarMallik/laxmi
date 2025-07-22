@@ -1,2 +1,0 @@
-Backend Api
-https://lakshmimaternity.com:13022/laxmimaternity_backend/

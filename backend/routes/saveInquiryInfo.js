@@ -14,7 +14,7 @@ inquiryRouter.post("/saveinquiry", (req, res) => {
                 res.send({ status: 0, data: result, message: "SUCCESS" });
 
                 try {
-                    sendEmail({ toEmail: "nsoumyaprakash@gmail.com", subject: req.body.subject, details: req.body });
+                    sendEmail({ toEmail: "lakshmimaternityhome@gmail.com", subject: req.body.subject, details: req.body });
                 } catch (error) {
                     console.error('Error Sending Email:', error);
                     res.status(500).send({ status: 1, error, message: "SOME ERROR HAPPENED WHILE SENDING EMAIL" });

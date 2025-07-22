@@ -16,6 +16,8 @@ aboutRouter.get("/aboutcontent", async (req, res) => {
             aboutKeys: aboutKeysResult
         };
 
+        console.log('Data fetched successfully:', data);
+
         res.send({ status: 0, data, message: "SUCCESS" });
 
     } catch (error) {

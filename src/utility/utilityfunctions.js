@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
-export const baseUrl = "http://localhost:5000/laxmimaternity_backend/";
-// export const baseUrl = "https://lakshmimaternity.com:13022/laxmimaternity_backend/";
-// export const baseUrl = "laxmimaternity_backend/";
+export const baseUrl = "http://localhost:5000/laxmimaternity_backend/"
+// export const baseUrl = "https://lakshmimaternity.com:13011/laxmimaternity_backend/";
+// export const baseUrl = "backend/";
 
 const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)

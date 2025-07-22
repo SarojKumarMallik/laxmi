@@ -1,14 +1,19 @@
 /* # About --------------------------------------------------------------  */
+
+.para1{
+    padding-bottom: 10px;
+}
+
 .about .icon-boxes h4 {
     font-size: 18px;
-    color: #4b7dab;
+    color: #449c74;
     margin-bottom: 15px;
 }
 
 .about .icon-boxes h3 {
     font-size: 28px;
     font-weight: 700;
-    color: #2c4964;
+    color: #449c74;
     margin-bottom: 15px;
 }
 
@@ -23,19 +28,19 @@
     justify-content: center;
     width: 64px;
     height: 64px;
-    border: 2px solid #8dc2f1;
+    border: 2px solid #d56889;
     border-radius: 50px;
     transition: 0.5s;
 }
 
 .about .about-box .icon i {
-    color: #1977cc;
+    color: #aa2b5a;
     font-size: 32px;
 }
 
 .about .about-box:hover .icon {
-    background: #3fbbc0;
-    border-color: #3fbbc0;
+    background: #d56889;
+    border-color: #d56889;
 }
 
 .about .about-box:hover .icon i {
@@ -55,7 +60,7 @@
 }
 
 .about .about-box .title a:hover {
-    color: #1977cc;
+    color: #60cd9c;
 }
 
 .about .about-box .description {
@@ -65,7 +70,7 @@
 }
 
 .about .video-box {
-    background: url("/public/img/about.jpg") center center no-repeat;
+    background: url("/public/img/about.webp") center center no-repeat;
     background-size: cover;
     min-height: 500px;
 }
@@ -73,7 +78,7 @@
 .about .play-btn {
     width: 94px;
     height: 94px;
-    background: radial-gradient(#1977cc 50%, rgba(25, 119, 204, 0.4) 52%);
+    background: radial-gradient(#baf7e8 50%, rgba(25, 204, 112, 0.4) 52%);
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -104,14 +109,14 @@
     height: 120px;
     opacity: 1;
     border-radius: 50%;
-    border: 5px solid rgba(25, 119, 204, 0.7);
+    border: 5px solid rgba(25, 204, 129, 0.7);
     top: -15%;
     left: -15%;
     background: rgba(198, 16, 0, 0);
 }
 
 .about .play-btn:hover::after {
-    border-left: 15px solid #1977cc;
+    border-left: 15px solid #4bbfa2;
     transform: scale(20);
 }
 
@@ -246,7 +251,7 @@ main {
     font-size: 25px;
     line-height: 25px;
     font-weight: 900;
-    color: #00B2EB;
+    color: #449c74;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 40px;
@@ -254,7 +259,7 @@ main {
 }
 
 .text-blk.btn {
-    color: rgb(0, 178, 235);
+    color: rgb(65, 175, 133);
     background-image: initial;
     background-position-x: initial;
     background-position-y: initial;
@@ -392,6 +397,14 @@ main {
 
     .responsive-container-block.rightSide {
         margin: 0 auto 70px auto;
+    }
+    .about1{
+        margin-top: -40px;
+    }
+}
+@media (max-width: 991px){
+    .about{
+        padding-bottom: 0px;
     }
 }
 

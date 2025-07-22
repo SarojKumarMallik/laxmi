@@ -4,7 +4,7 @@ const { fetchData } = require('../utilityFunctions');
 
 doctorsFromClinicRouter.get("/doctorsfromclinic", async (req, res) => {
     try {
-        const response = await fetchData("getDoctorsFromClinic.jsp", "GET", { clinic_id: "clinic27" });
+        const response = await fetchData("getDoctorsFromClinic.jsp", "GET", { clinic_id: "clinic1" });
 
         if (response.result.status.statusCode === "0") {
             res.send({ status: 0, data: response.doctors, message: "SUCCESS" });

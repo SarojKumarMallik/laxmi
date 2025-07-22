@@ -4,7 +4,7 @@
   "description": "Laxmi Maternity & Surgical Center backend apis.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,6 @@
     "nodemailer": "^6.9.4"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.9"
   }
 }

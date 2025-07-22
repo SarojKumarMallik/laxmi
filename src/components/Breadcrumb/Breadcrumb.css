@@ -1,0 +1,23 @@
+.breadcrumb-banner{
+  position: relative;
+  width: 100%;
+  
+}
+
+.breadcrumb-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(9, 103, 116, 0.75);
+  z-index: 0;
+}
+
+.breadcrumb-banner .container {
+  z-index: 1;
+}
+
+.breadcrumb-banner a {
+  color: #fff;
+}

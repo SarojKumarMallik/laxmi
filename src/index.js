@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-
 import ProgressState from './context/loading/progressstate';
 import LandingState from './context/landing/landingstate';
 import FeaturedServicesState from './context/featuredservices/featuredservicesstate';
@@ -18,6 +17,7 @@ import AppointmentState from './context/appointment/appointmentstate';
 import MainMenuState from './context/mainmenu/mainmenustate';
 import FooterMenuState from './context/footermenu/footermenustate';
 import DynamicPageState from './context/dynamicpage/dynamicpagestate';
+import QrState from './context/qr/qrstate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -38,9 +38,9 @@ root.render(
                           <PackagesState>
                             <AppointmentState>
                               <DynamicPageState>
-
+                              <QrState>
                                 <App />
-
+                                </QrState>
                               </DynamicPageState>
                             </AppointmentState>
                           </PackagesState>
@@ -57,6 +57,7 @@ root.render(
     </MainMenuState>
 
   </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

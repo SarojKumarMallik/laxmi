@@ -22,7 +22,7 @@
 .appointment .appointment-form input:focus,
 .appointment .appointment-form textarea:focus,
 .appointment .appointment-form select:focus {
-    border-color: #1977cc;
+    border-color: #b83a64;
 }
 
 .appointment .appointment-form input,
@@ -35,7 +35,7 @@
 }
 
 .appointment .appointment-form .appt-btn {
-    background: #1977cc;
+    background: #b22e5a;
     border: 0;
     padding: 10px 35px;
     color: #fff;
@@ -44,5 +44,5 @@
 }
 
 .appointment .appointment-form .appt-btn {
-    background: #3fbbc0;
+    background: #a32e55;
 }

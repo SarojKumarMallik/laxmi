@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import $ from "jquery";
 import AppointmentContext from "./appointmentcontext";
 import { baseUrl } from "../../utility/utilityfunctions";
@@ -25,8 +26,23 @@ const AppointmentState = (props) => {
         });
     }
 
+    const saveAppointment = (data) => {
+        $.ajax({
+            url: `${baseUrl}saveappointment`,
+            type: "POST",
+            data: data,
+            success: (response) => {
+                if (response.status === 0) {
+                    toast.success("Your appointment request sent successfully!", { theme: "colored" });
+                } else {
+                    console.log(response);
+                }
+            },
+        });
+    }
+
     return (
-        <AppointmentContext.Provider value={{ slots, getSlots, slotTimings }}>
+        <AppointmentContext.Provider value={{ slots, getSlots, saveAppointment, slotTimings }}>
             {props.children}
         </AppointmentContext.Provider>
     );

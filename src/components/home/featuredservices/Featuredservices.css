@@ -25,7 +25,7 @@
 }
 
 .featured-services .icon-box:hover::before {
-    background: #3fbbc0;
+    background: #60cd9c;
     top: 0;
     border-radius: 0px;
 }
@@ -37,7 +37,7 @@
 .featured-services .icon i {
     font-size: 48px;
     line-height: 1;
-    color: #1977cc;
+    color: #d56889;
     transition: all 0.3s ease-in-out;
 }
 

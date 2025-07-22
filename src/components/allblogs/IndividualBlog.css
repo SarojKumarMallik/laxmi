@@ -24,6 +24,7 @@
 .blog-card-text strong,
 .blog-card-text p {
     color: #797979;
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
+    
 }

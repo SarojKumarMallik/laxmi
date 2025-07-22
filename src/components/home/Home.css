@@ -2,7 +2,7 @@
 # Sections General
 --------------------------------------------------------------*/
 #main {
-    padding-top: 16rem;
+    /* padding-top: 16rem; */
 }
 
 section {
@@ -26,6 +26,7 @@ section {
     padding-bottom: 20px;
     position: relative;
     color: #2c4964;
+    padding-top: 22px;
 }
 
 .section-title h2::before {
@@ -45,7 +46,7 @@ section {
     display: block;
     width: 40px;
     height: 3px;
-    background: #1977cc;
+    background: #60cd9c;
     bottom: 0;
     left: calc(50% - 20px);
 }

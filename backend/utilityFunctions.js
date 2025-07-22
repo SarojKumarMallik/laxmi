@@ -47,14 +47,14 @@ function sendEmail(data) {
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'nayaksoumyaprakash3@gmail.com',
-            pass: 'blpkgzdszezlvvbt'
+            user: 'lakshmimaternityhome@gmail.com',
+            pass: 'nwsjskwfnnkpoyzl'
         },
     });
 
     // Setup email data
     const mailOptions = {
-        from: 'nayaksoumyaprakash3@gmail.com',
+        from: 'lakshmimaternityhome@gmail.com',
         to: data.toEmail,
         subject: data.subject,
         text: text,

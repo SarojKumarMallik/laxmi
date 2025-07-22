@@ -4,7 +4,7 @@ const { fetchData } = require('../utilityFunctions');
 
 slotsRouter.post("/allslots", async (req, res) => {
     const queryParams = {
-        clinic_id: "clinic27",
+        clinic_id: "clinic1",
         doctor_id: req.body.doctorId,
         start_date: req.body.apptDate,
         end_date: req.body.apptDate

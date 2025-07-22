@@ -63,19 +63,19 @@ function Contact() {
                             <div className="address">
                                 <i className={address.icon}></i>
                                 <h4>{address.heading}</h4>
-                                <p>{address.address}</p>
+                               <a href="https://maps.app.goo.gl/BfEtLT6YFRg2J2RTA"> <p>{address.address}</p></a>
                             </div>
 
                             <div className="email">
                                 <i className={email.icon}></i>
                                 <h4>{email.heading}</h4>
-                                <p>{email.email}</p>
+                                <a href={`mailto:${email.email}`}><p>{email.email}</p></a>
                             </div>
 
                             <div className="phone">
                                 <i className={phone.icon}></i>
                                 <h4>{phone.heading}</h4>
-                                <p>{phone.phone}</p>
+                                <a href='tel:08023347276'><p>{phone.phone}</p></a>
                             </div>
                         </div>
                     </div>

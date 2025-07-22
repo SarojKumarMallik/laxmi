@@ -9,8 +9,13 @@ function Achievementitem(props) {
             <div className="count-box">
                 <i className={icon}></i>
                 <span data-purecounter-start="0" data-purecounter-end={numbers} data-purecounter-duration="1" className="purecounter"></span>
-                <p><strong>{title}</strong> {description}</p>
-                <a href={moreLink}>{parse(more)}</a>
+                <p>
+                <strong>{title}</strong> 
+                </p>
+                {/* <p>
+                {description}</p>
+
+                <a href={moreLink}>{parse(more)}</a> */}
             </div>
         </div >
     );

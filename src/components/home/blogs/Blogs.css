@@ -20,7 +20,7 @@
 }
 
 .blog-heading strong {
-    color: #0a0ef8;
+    color: #3ea164;
     border: 2px solid red;
     padding-left: 6rem;
     font-size: 1rem;
@@ -129,6 +129,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
+/* .connnn{
+    text-overflow: ellipsis;
+} */
 
 .blog-author {
     display: flex;

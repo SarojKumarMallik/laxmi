@@ -1,5 +1,5 @@
 // Allow requests only from the specified origins
-const allowedOrigins = ['https://lakshmimaternity.com/', 'http://localhost:3000'];
+const allowedOrigins = ['https://lakshmimaternity.com/', 'http://localhost:3000','https://www.lakshmimaternity.com/', 'lakshmimaternity.com'];
 
 const corsOptions = {
     origin: (origin, callback) => {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2023 at 02:53 PM
+-- Generation Time: Sep 27, 2023 at 12:41 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 7.4.33
 
@@ -77,7 +77,7 @@ CREATE TABLE `about_keys` (
 INSERT INTO `about_keys` (`id`, `icon`, `title`, `content`, `isActive`, `created`, `orgCode`) VALUES
 (1, 'bx bx-heart', 'Mission:', 'Our mission is to provide comprehensive and compassionate healthcare services to women and children, focusing on maternity care, child care, and general medical services. We strive to ensure a safe and nurturing environment for expectant mothers, offering personalized care and support throughout their pregnancy journey. Our mission extends to promoting the overall well-being of women, infants, and children, empowering them with the knowledge and resources necessary to lead healthy lives.', 1, '2023-07-19 16:05:57', 'lax123'),
 (2, 'bx bx-health', 'Vision:', 'At Lakshmi Maternity & Surgical Centre, our vision is to be the leading maternity hospital in the region, recognized for our exceptional healthcare services and commitment to patient satisfaction. We aim to continually enhance our medical expertise, infrastructure, and technological advancements to provide the highest quality of care. We aspire to create a supportive and compassionate environment where every patient feels valued, heard, and respected.', 1, '2023-07-19 16:05:57', 'lax123'),
-(3, 'bx bx-help-circle', 'SPhilosophy:', 'Our philosophy is rooted in the belief that every woman deserves access to safe, reliable, and affordable maternity care. We understand that pregnancy and childbirth are significant milestones in a woman\'s life, and we strive to make this journey as comfortable and memorable as possible. We emphasize a holistic approach to healthcare, considering the physical, emotional, and psychological well-being of our patients. With a team of experienced healthcare professionals, we ensure that each patient receives individualized attention, evidence-based medical care, and continuous support throughout their experience with us.', 1, '2023-07-19 16:05:57', 'lax123');
+(3, 'bx bx-help-circle', 'Philosophy:', 'Our philosophy is rooted in the belief that every woman deserves access to safe, reliable, and affordable maternity care. We understand that pregnancy and childbirth are significant milestones in a woman\'s life, and we strive to make this journey as comfortable and memorable as possible. We emphasize a holistic approach to healthcare, considering the physical, emotional, and psychological well-being of our patients. With a team of experienced healthcare professionals, we ensure that each patient receives individualized attention, evidence-based medical care, and continuous support throughout their experience with us.', 1, '2023-07-19 16:05:57', 'lax123');
 
 -- --------------------------------------------------------
 
@@ -109,6 +109,38 @@ INSERT INTO `achievements` (`id`, `icon`, `numbers`, `title`, `description`, `mo
 (2, 'far fa-hospital', 36, 'Departments', 'adipisci atque cum aut numquam delectus', '/', 'Find out more &raquo;', 1, '2023-07-19 12:48:05', NULL, NULL, 'lax123'),
 (3, 'fas fa-flask', 23, 'Research Lab', 'aut commodi quaerat. Aliquam ratione', '/', 'Find out more &raquo;', 1, '2023-07-19 12:48:05', NULL, NULL, 'lax123'),
 (4, 'fas fa-award', 250, 'Awards', 'rerum asperiores dolor molestiae doloribu', '/', 'Find out more &raquo;', 1, '2023-07-19 12:48:05', NULL, NULL, 'lax123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `id` int(11) NOT NULL,
+  `patientName` varchar(50) DEFAULT NULL,
+  `patientEmail` varchar(50) DEFAULT NULL,
+  `patientPhone` varchar(15) DEFAULT NULL,
+  `patientAge` text DEFAULT NULL,
+  `patientAddress` text DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `drName` text DEFAULT NULL,
+  `apptDate` text DEFAULT NULL,
+  `apptTime` text DEFAULT NULL,
+  `created` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated` date DEFAULT NULL,
+  `deleted` date DEFAULT NULL,
+  `orgCode` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `appointments`
+--
+
+INSERT INTO `appointments` (`id`, `patientName`, `patientEmail`, `patientPhone`, `patientAge`, `patientAddress`, `message`, `drName`, `apptDate`, `apptTime`, `created`, `updated`, `deleted`, `orgCode`) VALUES
+(1, '', '', '', '', '', '', '', '', '', '2023-09-27 07:55:01', NULL, NULL, 'lax123'),
+(2, 'Soumya Prakash Nayak', 'nsoumyaprakash@gmail.com', '8908930619', '18-40', 'Ama gaan re', 'mu janini', 'DOC1141', 'Fri Jul 07 2023 13:48:03 GMT+0530 (India Standard Time)', '235361138', '2023-09-27 08:22:01', NULL, NULL, 'lax123'),
+(3, 'nvbhlb,k', 'nvjm@gmail.com', ' vh,bm', '18-40', 'mbvb,m', 'hgj,', 'Dr. Sanjit', 'Fri Jul 07 2023 13:48:03 GMT+0530 (India Standard Time)', '07:00:00 - 07:15:00', '2023-09-27 08:34:24', NULL, NULL, 'lax123');
 
 -- --------------------------------------------------------
 
@@ -660,7 +692,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `uuid`, `name`, `email`, `password`, `phone`, `role`, `orgCode`, `status`, `image`, `created_on`, `updated_on`, `last_login`, `browser`) VALUES
-(1, 'f1583e3c-31cc-11ee-96e6-d2d5b50d1d6b', 'Sudeshna Priyadarshini', 'sudeshna@ikontel.com', '$2y$10$oaBN7OMloUz6jOCL.VEP3eygRwa3BURME30MSS4BHAX0dq6vjoMRa', 9999999999, 'SuperAdmin', NULL, 1, NULL, '2023-08-03 07:11:18', NULL, '2023-08-03 09:33:48', 'Google Chrome');
+(1, 'f1583e3c-31cc-11ee-96e6-d2d5b50d1d6b', 'Sudeshna Priyadarshini', 'sudeshna@ikontel.com', '$2y$10$oaBN7OMloUz6jOCL.VEP3eygRwa3BURME30MSS4BHAX0dq6vjoMRa', 9999999999, 'SuperAdmin', NULL, 1, NULL, '2023-08-03 07:11:18', NULL, '2023-08-09 10:06:09', 'Google Chrome'),
+(3, '77ee4db1-369c-11ee-add4-a6ad6e21595c', 'Soumya Prakash Nayak', 'soumya.nayak@ikontel.com', '$2y$10$pIiSKn6xchzkedpS3NVB.uIzvFsIdccMuSzsIlDpJMRk7KtD7nZx6', 8908930619, 'Admin', 'lax123', 1, NULL, '2023-08-09 10:06:54', NULL, '2023-09-27 10:30:01', 'Mozilla Firefox');
 
 --
 -- Indexes for dumped tables
@@ -682,6 +715,12 @@ ALTER TABLE `about_keys`
 -- Indexes for table `achievements`
 --
 ALTER TABLE `achievements`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `appointments`
+--
+ALTER TABLE `appointments`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -809,6 +848,12 @@ ALTER TABLE `achievements`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `appointments`
+--
+ALTER TABLE `appointments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
@@ -908,7 +953,7 @@ ALTER TABLE `sub_menus`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

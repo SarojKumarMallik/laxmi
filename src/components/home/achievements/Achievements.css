@@ -14,7 +14,7 @@
 .achievements .count-box i {
     display: block;
     font-size: 30px;
-    color: #1977cc;
+    color: #d56889;
     float: left;
 }
 
@@ -45,5 +45,5 @@
 }
 
 .achievements .count-box a:hover {
-    color: #3fbbc0;
+    color:  #60cd9c;
 }

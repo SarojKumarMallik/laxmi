@@ -10,7 +10,8 @@ const aboutRouter = require('./routes/aboutContent');
 const achievementsRouter = require('./routes/achievementsContent');
 const blogsRouter = require('./routes/blogsContent');
 const contactInfoRouter = require('./routes/contactInfo');
-const doctorsInfoRouter = require('./routes/doctorsInfo');
+const {doctorsInfoRouter} = require('./routes/doctorsInfo');
+const {doctorsInfoDCTPageRouter} = require('./routes/doctorsInfo')
 const featuredServicesRouter = require('./routes/featuredServices');
 const landingFoldRouter = require('./routes/landingFoldContent');
 const packagesRouter = require('./routes/packages');
@@ -21,12 +22,14 @@ const inquiryRouter = require('./routes/saveInquiryInfo');
 const mainMenusRouter = require('./routes/mainMenuDetails');
 const footerMenusRouter = require('./routes/footerMenuDetails');
 const pageRouter = require('./routes/getPageContent');
+const appointmentRouter = require('./routes/saveAppointment');
+const qrRouter = require('./routes/qrContent');
 
 app.use(cors(corsOptions)); // Use the cors middleware with the specified options
 app.use(bodyParser.json()); // Parse JSON data
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded data
 
-const routes = [aboutRouter, achievementsRouter, blogsRouter, contactInfoRouter, doctorsInfoRouter, featuredServicesRouter, landingFoldRouter, packagesRouter, servicesRouter, doctorsFromClinicRouter, slotsRouter, inquiryRouter, mainMenusRouter, footerMenusRouter, pageRouter];
+const routes = [aboutRouter, achievementsRouter, blogsRouter, contactInfoRouter, doctorsInfoRouter,doctorsInfoDCTPageRouter, featuredServicesRouter, landingFoldRouter, packagesRouter, servicesRouter, doctorsFromClinicRouter, slotsRouter, inquiryRouter, mainMenusRouter, footerMenusRouter, pageRouter, appointmentRouter, qrRouter];
 
 routes.map(route => app.use('/laxmimaternity_backend/', route));
 

@@ -4,10 +4,20 @@
 #home {
     width: 100%;
     height: 90vh;
-    /* background: url("/public/img/home.jpg"); */
-    /* background-position: top center;
-    background-size: cover; */
-    margin-bottom: -200px;
+    /* margin-bottom: -200px; */
+    position: relative;
+    z-index: 0;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(135, 206, 250, 0.232); /* Light sky blue with opacity */
+    z-index: -1;
 }
 
 #home .container {
@@ -24,11 +34,14 @@
 }
 
 #home h2 {
+    width: 85%;
     color: #2c4964;
     margin: 10px 0 0 0;
     font-size: 24px;
+    text-align: justify;
 }
 
+/* CTA Button */
 #home .btn-get-started {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
@@ -41,43 +54,144 @@
     border-radius: 50px;
     transition: 0.5s;
     color: #fff;
-    background: #1977cc;
+    background: #a32e55;
 }
 
 #home .btn-get-started:hover {
-    background: #3fbbc0;
+    background: #60cd9c;
 }
 
+/* Large screens */
 @media (min-width: 1024px) {
     #home {
         background-attachment: fixed;
     }
 }
 
+/* Tablets & mobile */
 @media (max-width: 992px) {
     #home {
         margin-bottom: 0;
-        height: 100vh;
+        height: auto;
+        padding: 100px 20px 60px;
     }
 
     #home .container {
-        padding-bottom: 63px;
+        padding-bottom: 50px;
     }
 
     #home h1 {
-        font-size: 28px;
+        font-size: 24px;
         line-height: 36px;
+        /* text-align: center; */
     }
 
     #home h2 {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 24px;
-        margin-bottom: 30px;
+        text-align: left;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* #home .btn-get-started {
+        font-size: 13px;
+        padding: 10px 28px;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+}
+
+/* Short-height screens */
+@media (max-height: 600px) {
+    #home {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 }
 
-@media (max-height: 600px) {
-    #home {
-        height: 110vh;
-    }
+
+/* second home */
+
+.hero-section-modern {
+  position: relative;
+  padding: 60px 0;
+  background-image: url('../../../../public/img/uplaods/LMHHead.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.text-content {
+  padding: 20px;
+  max-width: 700px;
+  color: #000;
+}
+
+.headline {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtext {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+.modern-btn {
+  background-color: #44b678;
+  color: #fff;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.modern-btn:hover {
+  background-color: #349e67;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-left {
+  animation: fadeInLeft 1s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section-modern {
+    padding: 40px 20px;
+    text-align: left;
+  }
+
+  .headline {
+    font-size: 1.8rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
 }

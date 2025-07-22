@@ -21,7 +21,8 @@ function PrivacyPolicy() {
                 <h2>Privacy Policy</h2>
             </div>
             <div className="container">
-                <p>{disclaimer.privacy_policy}</p>
+                {/* <p>{disclaimer.privacy_policy}</p> */}
+                <p dangerouslySetInnerHTML={{__html: disclaimer.privacy_policy}}></p>
             </div>
         </div>
     );

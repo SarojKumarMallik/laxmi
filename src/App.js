@@ -1,4 +1,6 @@
-import './App.css';
+import './App.css'
+import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import { useContext, useEffect } from 'react';
@@ -11,13 +13,13 @@ import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import Pagenotfound from './components/pagenotfound/Pagenotfound';
 import Serviceitem from './components/services/Serviceitem';
-import Packages from './components/packages/Packages';
-import Doctors from './components/home/doctors/Doctors';
-import Contact from './components/home/contact/Contact';
+import Doctors from './components/Doctors/Doctors';
+import Contact from './components/Contact/Contact';
 import About from './components/about/About';
 import Appointment from './components/appointment/Appointment';
 import AllBlogs from './components/allblogs/AllBlogs';
 import IndividualBlog from './components/allblogs/IndividualBlog';
+import Qr from './components/qr/Qr';
 
 // Contexts And States
 import progressContext from './context/loading/progresscontext';
@@ -36,6 +38,10 @@ import mainmenuContext from './context/mainmenu/mainmenucontext';
 import footerMenuContext from './context/footermenu/footermenucontext';
 import dynamicPageContext from './context/dynamicpage/dynamicpagecontext';
 import DynamicPage from './components/dynamic-pages/DynamicPage';
+import qrContext from './context/qr/qrcontext';
+import { Helmet } from 'react-helmet';
+// import { HelmetProvider } from 'react-helmet-async';
+
 
 
 function App() {
@@ -52,6 +58,7 @@ function App() {
   const { services, getServices, getShortServices } = useContext(servicesContext);
   const { getFooterMenuItems } = useContext(footerMenuContext);
   const { pageDetail, getPageDetails } = useContext(dynamicPageContext);
+  const { getQrContent } = useContext(qrContext);
 
   useEffect(() => {
     showBackToTopBtn('.back-to-top');
@@ -69,12 +76,17 @@ function App() {
     getShortServices();
     getFooterMenuItems();
     getPageDetails();
+    getQrContent();
     // eslint-disable-next-line
+    // document.title = "title----";
   }, []);
 
 
   return (
+    <>
     <Router>
+{/* <HelmetProvider> */}
+  
 
       <ToastContainer />
       <LoadingBar color='#076ac0' progress={progress} />
@@ -87,22 +99,25 @@ function App() {
         {pageDetail.map(item => <Route exact path={`${item.url}`} element={<DynamicPage content={item} />} key={item.id} />)}
 
         <Route exact path="/blogs" element={<AllBlogs />} />
-        <Route exact path="/blog" element={<IndividualBlog />} />
-        <Route exact path="/packages" element={<Packages />} />
+        <Route exact path="/:url" element={<IndividualBlog />} />
+        {/* <Route exact path="/packages" element={<Packages />} /> */}
         <Route exact path="/doctors" element={<Doctors />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/appointment" element={<Appointment />} />
         <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route exact path="/terms-conditions" element={<TermsAndConditions />} />
+        <Route exact path="/qr" element={<Qr />} />
         <Route path="*" element={<Pagenotfound />} />
       </Routes>
 
       <Footer></Footer>
       <div id="preloader"></div>
       <a href="#" className="back-to-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+{/* // </HelmetProvider> */}
 
     </Router>
+    </>
   );
 }
 

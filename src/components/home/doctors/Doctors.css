@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # Doctors
 --------------------------------------------------------------*/
+.doctDCT{
+    
+}
+
 .doctors {
     background: #fff;
 }
@@ -12,11 +16,73 @@
     border-radius: 10px;
 }
 
-.doctors .member .pic {
-    overflow: hidden;
-    width: 200px;
-    height: 140px;
-    border-radius: 50%;
+.doctors .member img{
+    /* overflow: hidden; */
+    width: 100%;
+        height: 140px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1492px){
+    /* .doctors .member .img{
+        width: 224px;
+        height: 131px;
+    } */
+    .doctors .member img{
+        height: 138px;
+        }
+    
+}
+
+@media (max-width: 1200px){
+    /* .doctors .member .pic {
+        width: 264px;
+        height: 100px;
+    } */
+    .doctors .member img{
+        height: 110px;
+        }
+
+   
+    
+}
+@media (max-width: 992px){
+    .doctors .member img{
+    height: 160px;
+    }
+    
+}
+@media (max-width: 769px){
+    .doctors .member img{
+        height: 115px;
+        }
+    
+}
+@media (max-width: 504px){
+    .doctors .member img{
+        height: 100px;
+        }
+}
+@media (max-width: 403px){
+    /* .doctors .member .pic {
+        width: 460px;
+        height: 60px;
+    } */
+    .doctors .member img{
+        height: 80px;
+        }
+    
+}
+@media (max-width: 376px){
+    /* .doctors .member .pic {
+        width: 440px;
+        height: 50px;
+    } */
+    .doctors .member img{
+        height: 60px;
+        }
+    
 }
 
 .img-fluid {
@@ -58,7 +124,7 @@
     display: block;
     width: 50px;
     height: 1px;
-    background: #b2c8dd;
+    background: #449c74;
     bottom: 0;
     left: 0;
 }
@@ -83,7 +149,7 @@
     border-radius: 50px;
     width: 32px;
     height: 32px;
-    background: #a0bcd5;
+    background: #449c74;
 }
 
 .doctors .member .social a i {
@@ -93,7 +159,7 @@
 }
 
 .doctors .member .social a:hover {
-    background: #3fbbc0;
+    background: #60cd9c;
 }
 
 .doctors .member .social a+a {

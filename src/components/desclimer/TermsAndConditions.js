@@ -20,7 +20,8 @@ function TermsAndConditions() {
                 <h2>Terms And Conditions</h2>
             </div>
             <div className="container">
-                <p>{disclaimer.terms_n_conditions}</p>
+                {/* <p>{disclaimer.terms_n_conditions}</p> */}
+                <p dangerouslySetInnerHTML={{__html: disclaimer.terms_n_conditions}}></p>
             </div>
         </div>
     );
